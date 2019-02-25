@@ -1,0 +1,25 @@
+1.To obtain entire data
+SELECT * FROM `bigquery-public-data.austin_crime.crime` LIMIT 1000
+2.To obtain from the data set status which is not cleared
+SELECT * FROM `bigquery-public-data.austin_crime.crime` 
+Where clearance_status= 'Not cleared'
+3. To obtain unique district
+SELECT count(distinct(district)) FROM `bigquery-public-data.austin_crime.crime`
+4.To obtain maximum year
+SELECT Max(year) FROM `bigquery-public-data.austin_crime.crime`
+5. To obtain the data of clearance date in descending order
+SELECT * FROM `bigquery-public-data.austin_crime.crime` 
+Order by clearance_date Desc
+6. To obtain data where description is Rape and district is B
+SELECT * FROM `bigquery-public-data.austin_crime.crime`
+where description= 'RAPE' AND district='B'
+7. To obtain address as Austin
+SELECT address="Austin,TX" FROM `bigquery-public-data.austin_crime.crime` 
+8. To obtain minimum timestamp
+SELECT Min(timestamp) FROM `bigquery-public-data.austin_crime.crime`
+9. To obtain data of clearance date in ascending order
+SELECT * FROM `bigquery-public-data.austin_crime.crime`
+order by clearance_date Asc
+10. To obtain data in between 2015-2016
+SELECT * FROM `bigquery-public-data.austin_crime.crime` 
+where year > 2015 AND year <2016
